@@ -1,0 +1,71 @@
+<div class="about" fxLayoutGap="2rem" fxLayout="column">
+
+    <h2>Firebase & AngularFire In Depth</h2>
+    <div fxLayout="row" fxLayoutGap="2rem">
+        <img class="course-image mat-elevation-z10" src="https://angular-university.s3-us-west-1.amazonaws.com/course-images/firebase-course-1.jpg">
+
+        <div style="height: 12rem;width: 25rem;border: 1px solid;padding: 1rem;" fxLayout="column" fxLayoutGap="1rem">
+            <span *ngIf="Note">* Note&nbsp;-&nbsp;{{Note}}</span>
+
+            <div fxLayoutGap="1rem" style="width: 100%;border: 1px solid;">
+                <span *ngFor="let item of TempData">
+          {{item}}
+        </span>
+            </div>
+
+        </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <button mat-raised-button class="upload-btn" color="primary" (click)="uploadData()">Populate Database</button>&nbsp;
+    <mat-divider></mat-divider>
+
+    <div style="width: 100%;" fxLayout="row" fxLayoutGap="4rem">
+        <div>
+            <button mat-raised-button color="accent" (click)="onReadCollection()">Get Single Collection (Bunch of
+        Docs)</button>
+            <button mat-raised-button color="accent" (click)="onReadDoc()">Get Document with ID From Collection</button>
+        </div>
+
+        <div>
+            <button mat-raised-button color="accent" (click)="onReadCollectionDocumentCollection()">Get Collection -> Document
+        -> Collection</button>
+            <button mat-raised-button color="accent" (click)="onReadCollectionComplexQueries()">Get Collection Complex
+        Queries</button>
+        </div>
+
+        <div>
+            <button mat-raised-button color="accent" (click)="onMultipleQueries()">Multiple Queries</button>
+            <button mat-raised-button color="accent" (click)="onCollectionGroup()">Collection Group Query (Get all lessons
+        collection from whole database)</button>
+        </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+
+    <div style="width: 100%;" fxLayout="row" fxLayoutGap="4rem">
+        <div>
+            <button mat-raised-button color="accent" (click)="onReadSnapShotDoc()">Get Document with ID From Collection
+        (<span style="color: #1A66D2;">Snapshot Changes</span> &nbsp;<span>Realtime Websocket</span>)</button>
+            <button mat-raised-button color="accent" (click)="onReadSnapShotCollection()">Get Single Collection (<span
+          style="color: #1A66D2;">Snapshot Changes</span> &nbsp;<span>Realtime Websocket</span>)</button>
+        </div>
+
+        <div>
+            <button mat-raised-button color="accent" (click)="onReadValueChangesDoc()" fxLayout="row"> Get Document with ID
+        From
+        Collection
+        (<span style="color: #1A66D2;">Value Changes</span> &nbsp;<span>Realtime Websocket</span>)</button>
+            <button mat-raised-button color="accent" (click)="onReadValueChangesCollection()" fxLayout="row"> Get Single
+        Collection
+        (<span style="color: #1A66D2;">Value Changes</span> &nbsp;<span>Realtime Websocket</span>)</button>
+        </div>
+    </div>
+
+    <div style="width: 100%;" fxLayout="row" fxLayoutGap="4rem">
+
+    </div>
+
+</div>
