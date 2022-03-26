@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  useEmulators:true,
   firebase: {
     apiKey: "AIzaSyDPACR_NXQdbvXPXHY0nauyTz3FmxMkNZg",
     authDomain: "baskya-daab2.firebaseapp.com",
@@ -20,7 +21,9 @@ export const environment = {
 };
 
 /*
- * Z2hwX1lnUVpWajVTWXJKRUZTM2w5OGU3b2ZaQkE2ZmxvUjBQZ2lsdQ==
+    // "local-dev": "firebase emulators:start --only firestore,auth,functions --import test-data",
+
+* Z2hwX1lnUVpWajVTWXJKRUZTM2w5OGU3b2ZaQkE2ZmxvUjBQZ2lsdQ==
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
  *
